@@ -1,0 +1,32 @@
+# PROGRAM SIMPLE_SHOPPING_CART
+
+start
+store namaProduk with ['001' => 'produk1', '002'=> 'produk2']
+store hargaProduk with [namaProduk.key[0] => 10000, namaProduk.key[1]=>20000]
+make change, next, fixCart, tempCart
+
+Do
+	print "change product by id :"
+	store pilih with "001"
+	
+	for "x" from 0 in namaProduk
+		if change = namaProduk.key[x]
+			print "Data namaProduk[x] price Rp.hargaProduk[namaProduk.key[x]]"
+			store tempCart with namaProduk[x]	
+		else
+			print "product not found"
+    
+    print "Do you want to add more items to cart?"
+	store next with "y"
+			
+while next = 'y'
+
+	for "x" from 0 in tempCart
+		store fixCart[x] with tempCart[x]
+	
+	store tempCart[x] with fixCart[x]
+
+print "barang berhasil di tambahkan ke keranjang"
+process checkout
+print "Checkout berhasil"
+end
