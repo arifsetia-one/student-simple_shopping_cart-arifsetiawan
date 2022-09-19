@@ -3,7 +3,7 @@
 start
 store namaProduk with ['001' => 'produk1', '002'=> 'produk2']
 store hargaProduk with [namaProduk.key[0] => 10000, namaProduk.key[1]=>20000]
-make change, next, fixCart, tempCart
+make change, next, fixCart, tempCart //membuat variable
 
 Do
 	print "change product by id :"
