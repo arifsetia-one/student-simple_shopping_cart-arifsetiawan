@@ -7,7 +7,7 @@ make change, next, fixCart, tempCart
 
 Do
 	print "change product by id :"
-	store pilih with "001" //misal id 001
+	store change with "001" //misal id 001
 	
 	for "x" from 0 in namaProduk
 		if change = namaProduk.key[x]
